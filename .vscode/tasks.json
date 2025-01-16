@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      
+        {
+            "label": "Build articles ",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "./build_article.py"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
