@@ -1,6 +1,6 @@
 # CSV files: A universal format, yet universally frustrating. Let’s fix that!
 
-> CSV files are universal, yet frustrating. Nanocell-csv fixes this by offering a fast, privacy-first tool for editing small tables and previewing large datasets. It prevents data corruption, ensures compatibility, and is fully crossplatform.
+> CSV files are universal, yet frustrating. Nanocell-csv fixes this by offering a free, fast and simple tool for editing small tables and previewing large datasets. It prevents data corruption, helps you cleanup your data, and is fully crossplatform.
 
 CSV files are the backbone of data exchange—simple, universal, and incredibly versatile. To this day, they are the best way to store tabular data in git repositories and probably the most universally used ETL file format (Extract Transform Load).  Yet, for something so ubiquitous, they often come with a frustrating reality: no tool seems to handle them quite right. Open a small file in Excel, and you're met with sluggish loading times and a minefield of potential data corruption. Try to preview a massive file, and you’re left twiddling your thumbs. Other specialized apps all seem archaic, are freemium at best, and often single-platform. It is time for change!
 

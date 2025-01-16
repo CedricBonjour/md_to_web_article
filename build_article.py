@@ -117,7 +117,7 @@ def md_to_html(md_file_path, html_file_path):
 <title>{title}</title>
 <meta property="og:title" content="{title}" />
 <meta property="og:type" content="article" />
-<meta property="og:description " content="{first_p}">
+<meta property="og:description" content="{first_p}">
 <meta name="description" content="{first_p}">
 
 {tag_img_og}
