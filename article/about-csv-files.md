@@ -53,7 +53,7 @@ Working with CSVs isn’t always smooth sailing. Here are some common gripes:
 **Encoding Nightmares:** Non-ASCII characters (such as é and ü) can wreak havoc if encoding isn’t detected properly. It is worth mentioning that the recommended default encoding for CSV files is `utf-8`.
 **Comma Confusion:** What happens when your data values contain commas? (Spoiler: It can get messy if not handled with the right standard.)
 **Standard misalignment:** Over time, people have tweaked the CSV standards to better fit their needs. An example of this is in european countries where the  commas are used for decimal numbers in european countries, the comma was replaced by a semicolon.  
-**Misuse of Excel:** Microsoft Excel is a great data analysis tool but poorly suited for CSV files. It often misinterprets CSV standards or value data-type. This often ends up in data corruption especially when users have the `auto-save` mode activated. Furthermore CSV files or often database extracts that are too large to be handled by Excel making it feel clunky or even crash upon opening a file.   
+**Misuse of Excel:** Microsoft Excel is a great data analysis tool but poorly suited for CSV files. This holds especially true in the fields of ETL and data-engineering. It often misinterprets CSV standards or value data-types. This often ends up in data corruption and even more so when users have the `auto-save` mode activated. Furthermore, CSV files or often database extracts that are too large to be handled by Excel making it feel clunky or even crash upon opening a file. What hold for Excel is also true of other major spreadsheet editors such as Google Sheets, Libre Office Calc, or Mac's Numbers.
 
 > Poor tooling due to negligence in following standards
 
@@ -68,7 +68,7 @@ Here is a hypothesis:
 > 2. Fancy features require complexity that CSV files can't handle.
 > 3. Editors come up with a proprietary file format to enable this differenciation.
 > 4. Editors leave out CSV file handling (more or less purposly) to push their user base towards their proprietary format.
-> 5. Users can't find a descent CSV file editor
+> 5. Users can't find a descent CSV file editor.
 
 
 ## The solution: An alternative spreadsheet editor dedicated to CSV files
