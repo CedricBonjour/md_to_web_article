@@ -184,7 +184,7 @@ font-size: .8em;
 
 pre{{
     margin: 1em 0;
-    line-height: .8EM;
+    line-height: 1em;
 }}
 
 pre code {{

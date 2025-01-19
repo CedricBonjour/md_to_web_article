@@ -34,9 +34,9 @@ Fast forward to today, and CSV files are everywhere. They are a cornerstone of t
 
 
 
-## Why do CSV files remain truly indispensable
+## Why do CSV files remain truly indispensable?
 
-What makes the CSV file truly indispensable is its combination of simplicity, age-old reliability, and non-proprietary nature. There’s beauty in its straightforwardness. You don’t need fancy software to open, read and understand a CSV—a text editor will do. It’s the only guaranteed file format that will interface seamlessly with almost any existing data handling software, from legacy systems to cutting-edge platforms. Sure, XML and JSON formats have their moments in the spotlight, but when it comes to reliability that will stand the test of time, the CSV is unmatched.
+What makes the CSV file truly indispensable is its combination of simplicity, age-old reliability, and non-proprietary nature. There’s beauty in its straightforwardness. You don’t need fancy software to open, read and understand a CSV file—the most lightweight text editors will do (notyepad, fim, emacs...). You can even check their content from the system's command line: `cat ./path-to/filename.csv`. It’s the file format that is guaranteed to interface seamlessly with any existing data handling software, from legacy systems to cutting-edge platforms. Sure, XML and JSON formats have their moments in the spotlight, but when it comes to reliability that will stand the test of time, the CSV is unmatched.
 
 > Simple
 > Reliable
@@ -46,7 +46,7 @@ What makes the CSV file truly indispensable is its combination of simplicity, ag
 
 
 
-##  Common Problems with CSV Files
+##  Common Problems Working with CSV Files
 
 Working with CSVs isn’t always smooth sailing. Here are some common gripes:
 
