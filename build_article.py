@@ -104,7 +104,7 @@ def md_to_html(md_file_path, html_file_path):
           tag_img_og = f'<meta property="og:image" content="{img_url}" />'
           tag_img_banner = f'<img id="banner" src="{img_url}" alt="article banner image" />'
         title = get_title(md_lines)
-        html_body = markdown.markdown(  "\n".join(md_lines))
+        html_body = markdown.markdown(  "\n".join(md_lines),extensions=["fenced_code"])
         first_p = get_first_paragraph(html_body)
 
         print(  len(first_p) , " >>> " , first_p, "\n")
@@ -143,7 +143,7 @@ max-width: 40em;
 }}
 code, strong{{
 background: #eeeeee;
-padding: 2px .3em;
+padding: 2px .5em;
 border-radius: .2em;
 }}
 #banner{{
@@ -156,12 +156,8 @@ max-width: 100%;
 display:block;
 margin:2em auto;
 }}
-blockquote{{
-  border-left: .5em solid green;
-  margin: 0;
-  padding: .5em 1em;
-  background-color: #eeeeee;
-  font-style: italic;
+ul{{
+      list-style-type: none;
 }}
 h1{{
 margin: 2em 0;
@@ -169,9 +165,30 @@ text-align: left;
 border-bottom: solid 1px;
 padding-bottom: 1em;
 }}
+
+
+pre,  blockquote{{
+  margin: 0;
+  padding: .5em 1em;
+  background-color: #eeeeee;
+}}
+
+blockquote{{
+  border-left: .5em solid green;
+}}
+
 #article_metadata{{
 font-style: italic;
 font-size: .8em;
+}}
+
+pre{{
+    margin: 1em 0;
+    line-height: .8EM;
+}}
+
+pre code {{
+  padding : 0;
 }}
 
 </style>
