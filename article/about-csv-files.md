@@ -1,5 +1,5 @@
 <!-- https://www.nanocell-csv.com/img/meme/csv-to-rule-them-all.webp -->
-# CSV Files: The one data file format to rule them all!
+# CSV: One data file to rule them all!
 
 > CSV files are the backbone of data exchange—simple, universal, and incredibly versatile.  It’s not flashy, it’s not trendy, and yet, it is everywhere. But if CSV files are so simple, important and universal then why do they feel so painful to work with?
 
