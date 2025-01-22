@@ -104,7 +104,7 @@ def md_to_html(md_file_path, html_file_path):
           tag_img_og = f'<meta property="og:image" content="{img_url}" />'
           tag_img_banner = f'<img id="banner" src="{img_url}" alt="article banner image" />'
         title = get_title(md_lines)
-        html_body = markdown.markdown(  "\n".join(md_lines),extensions=["fenced_code"])
+        html_body = markdown.markdown(  "\n".join(md_lines),extensions=["fenced_code", "tables"])
         first_p = get_first_paragraph(html_body)
 
         print(  len(first_p) , " >>> " , first_p, "\n")
@@ -123,29 +123,25 @@ def md_to_html(md_file_path, html_file_path):
 {tag_img_og}
 <style>
 body {{
-  
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+
+font-family: Arial, sans-serif;
+line-height: 1.5;
+margin: 0;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
 }}
 p{{
-    text-align: justify;
+text-align: justify;
 }}
 section{{
-    margin: 0 1em;
+margin: 0 1em;
 
-    margin-bottom: 25vh;
+margin-bottom: 25vh;
 max-width: 40em;
 }}
-code, strong{{
-background: #eeeeee;
-padding: 2px .5em;
-border-radius: .2em;
-}}
+
 #banner{{
 width: 100%;
 max-width: 40em !important;
@@ -157,38 +153,64 @@ display:block;
 margin:2em auto;
 }}
 ul{{
-      list-style-type: none;
+
 }}
-h1{{
-margin: 2em 0;
-text-align: left;
-border-bottom: solid 1px;
-padding-bottom: 1em;
+ul li:nth-child(odd) {{
+background-color: none; 
+}}
+li p{{
+margin:0 ;
 }}
 
+h1{{
+font-size:2em;
+margin:1em 0;
+}}
+h2{{
+margin-top: 3em ;
+border-bottom: 1px solid black ; 
+}}
+h3{{
+font-size:inherit;
+}}
+
+code, em{{
+background-color: #eeeeee;
+padding: 3px .4em;
+border-radius: .2em;
+margin:.2em;
+}}
+
+code{{
+background:black;
+color: #ffffff;
+}}
 
 pre,  blockquote{{
-  margin: 0;
-  padding: .5em 1em;
-  background-color: #eeeeee;
+padding: .5em 1em;
 }}
 
 blockquote{{
-  border-left: .5em solid green;
+background-color: #eeeeee;
+margin: 0;
+border-left: .5em solid green;
 }}
 
-#article_metadata{{
-font-style: italic;
-font-size: .8em;
-}}
 
 pre{{
+    background: black;
+    color: #ffffff;
     margin: 1em 0;
     line-height: 1em;
 }}
 
 pre code {{
-  padding : 0;
+padding : 0;
+background-color : unset;
+}}
+#article_metadata{{
+font-style: italic;
+font-size: .8em;
 }}
 
 </style>
@@ -218,6 +240,4 @@ def run_on_dir(dir):
     basename = os.path.basename(file_path).split(".")[0]
     md_to_html(file_path, f"./out/{basename}.html" )
 
-run_on_dir("./article")
-
-
+run_on_dir("./md_docs")
